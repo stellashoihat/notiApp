@@ -38,21 +38,21 @@ export class LoginPage {
   login(){
     if(this.userData.username && this.userData.password){
      this.authService.postData(this.userData, "login").then((result) =>{
-     this.resposeData = result;
-     console.log(this.resposeData);
-     if(this.resposeData.userData){
-      localStorage.setItem('userData', JSON.stringify(this.resposeData) )
-     this.navCtrl.push(TabsPage);
-   }
-   else{
-     this.presentToast("Please give valid username and password");
-   }
+          this.resposeData = result;
+          console.log(this.resposeData);
+          if(this.resposeData.userData){
+            localStorage.setItem('userData', JSON.stringify(this.resposeData) )
+          this.navCtrl.push(TabsPage);
+        }
+        else{
+          this.presentToast("Please give valid username and password");
+        }
 
 
 
      }, (err) => {
        //Connection failed message
-       console.log("login post error!");
+       console.log("login post error! , Connection failed message");
      });
     }
     else{
