@@ -6,33 +6,33 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>signup</ion-title>
+    <ion-title>הרשמה למערכת</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding dir="rtl">
   <ion-list>
     <ion-item>
-      <ion-label stacked>Name</ion-label>
+      <ion-label stacked>שם מלא</ion-label>
       <ion-input type="text" [(ngModel)]="userData.name"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Email</ion-label>
+      <ion-label stacked>דוא״ל</ion-label>
       <ion-input type="text" [(ngModel)]="userData.email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Username</ion-label>
+      <ion-label stacked>שם משתמש</ion-label>
       <ion-input type="text" [(ngModel)]="userData.username"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Password</ion-label>
+      <ion-label stacked>סיסמה</ion-label>
       <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
     </ion-item>
 
-    <button ion-button full color="success" (click)="signup()">Sign up</button>
-    <a href="#" (click)="login()">Login Page</a>
+    <button ion-button full color="success" (click)="signup()">הרשמה</button>
+    <a href="#" (click)="login()">כניסה למערכת</a>
   </ion-list>
 </ion-content>

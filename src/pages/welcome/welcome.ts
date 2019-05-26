@@ -2,6 +2,7 @@ import { SignupPage } from './../signup/signup';
 import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the WelcomePage page.
@@ -18,6 +19,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class WelcomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    if(1){
+      this.navCtrl.push(TabsPage);
+    }
   }
 
   ionViewDidLoad() {

@@ -10,21 +10,21 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
+<ion-content padding dir='rtl'>
+  <ion-list dir='rtl'>
 
 
-  <ion-item>
-    <ion-label fixed>Username</ion-label>
+  <ion-item >
+    <ion-label fixed>שם משתמש</ion-label>
     <ion-input type="text" value="" [(ngModel)]="userData.username"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label fixed>Password</ion-label>
+    <ion-label fixed>סיסמה</ion-label>
     <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
   </ion-item>
 
-  <button ion-button block color="primary" (click)="login()">Login</button>
+  <button ion-button block color="primary" (click)="login()">התחבר</button>
 
 
   </ion-list>

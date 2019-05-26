@@ -40,7 +40,7 @@ export class LoginPage {
      this.authService.postData(this.userData, "login").then((result) =>{
           this.resposeData = result;
           console.log(this.resposeData);
-          if(this.resposeData.userData){
+          if(this.resposeData.userData.isOk==true){
             localStorage.setItem('userData', JSON.stringify(this.resposeData) )
           this.navCtrl.push(TabsPage);
         }
