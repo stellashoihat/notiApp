@@ -1,22 +1,36 @@
-<ion-header>
+<ion-header style="background-color: blue">
   <ion-navbar>
     <!--<img ion-right src="assets/imgs/log.jpg" class="navbarLogo" />-->
-    <ion-title>חיפוש</ion-title>
+    <ion-title>   מודעות אחרונות </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content>
+    <!-- <ion-card (tap)="tapEvent($event)"> -->
+  <ion-list dir="rtl">
 
-<ion-content padding>
-  <h2>Welcome {{userDetails.name}}</h2>
-  <h3>Email: {{userDetails.email}}</h3>
+    <button ion-item *ngFor="let item of responseData" (click)="itemSelected(item)">
+      <h2> {{item.title | slice:0:15}}</h2>
+      <h3>{{item.city}} </h3>
+      <h3>{{item.area}}</h3>
+      <p>{{item.address}}</p>
+      <span class="date">2019-05-30</span>
+     </button>
+ </ion-list>
 
 
 
 
 
+ <ion-fab bottom left>
+    <button ion-fab color="primary"><ion-icon name="cog"></ion-icon></button>
+    <ion-fab-list side="top">
+        <!-- <button color="primary" (click)="newRequest()">הגשת בקשה</button> -->
+      <button ion-fab color="danger"><ion-icon name="create" (click)="newRequest()"></ion-icon></button>
+    </ion-fab-list>
 
 
-
-
- <!-- <button ion-button color="primary" (click)="logout()">Logout</button> !-->
-
+    <ion-fab-list side="right">
+      <button ion-fab color="search_color"><ion-icon name="search" (click)="newRequest()"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

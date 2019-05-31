@@ -1,0 +1,67 @@
+<!--
+  Generated template for the ItemDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title> {{itemData.id}} :פרטי מודעה מספר</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content dir="rtl">
+    <ion-item>
+        <span>כותרת:</span>
+        <span>{{itemData.title}}</span>
+      </ion-item>
+      <ion-item>
+        <span>מספר תוכנית</span>
+        <span>{{itemData.mespar_tokhnet}}</span>
+      </ion-item>
+      <ion-item>
+          <span>איזור</span>
+          <span>{{itemData.area}}</span>
+        </ion-item>
+        <ion-item>
+          <span>עיר</span>
+          <span>{{itemData.city}}</span>
+        </ion-item>
+        <ion-item>
+            <span>כתובת</span>
+            <span text-wrap>{{itemData.address}}</span>
+          </ion-item>
+          <ion-item>
+            <span>מרחב תכנון</span>
+            <span>{{itemData.merhav_tekhnon}}</span>
+          </ion-item>
+          <ion-item>
+              <span>מספר </span>
+              <span>{{itemData.doc_number}}</span>
+            </ion-item>
+            <ion-item>
+              <span>מספר גוש</span>
+              <span>{{itemData.block_number}}</span>
+            </ion-item>
+            <ion-item>
+                <span>חלקה</span>
+                <span>{{itemData.helka}}</span>
+              </ion-item>
+              <ion-item>
+                  <span>תאור</span>
+                  <span text-wrap>{{itemData.description}}</span>
+                </ion-item>
+                <ion-item>
+                    <span>הערות</span>
+                    <span >{{itemData.note}}</span>
+                  </ion-item>
+            <ion-item *ngIf="itemData.pic_full_name">
+                      <ion-label class='fixedLabel' text-wrap>תמונה - לחץ להגדלה</ion-label>
+                      <ion-thumbnail item-right>
+
+                          <img (click)="toFullScreen(this.itemData.pic_full_name)" [src]=serverImagePath />
+                      </ion-thumbnail>
+            </ion-item>
+
+
+</ion-content>

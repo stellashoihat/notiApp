@@ -1,8 +1,10 @@
+import { SettingsPage } from './../appSettings/settings';
 import { AuthServiceProvider } from './../../providers/auth-service/auth-service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams ,ToastController} from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { LoginPage } from '../login/login';
+import { AlertController } from 'ionic-angular';
 
 
 /**
@@ -20,9 +22,9 @@ import { LoginPage } from '../login/login';
 export class SignupPage {
 
   responseData : any;
-  userData = {"username": "","password": "", "name": "","email": ""};
+  userData = {"username": "","password": "", "name": "","email": "","phone":""};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams , public authService:AuthServiceProvider,private toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams , public authService:AuthServiceProvider,private toastCtrl:ToastController,public popup:AlertController) {
   }
 
   ionViewDidLoad() {
@@ -41,12 +43,37 @@ export class SignupPage {
              this.authService.postData(this.userData,'signup').then((result)=>{
 
                         this.responseData = result;
-                        if(this.responseData.userData==true){
+                        if(this.responseData.userData.true==true){
 
-                            console.log(this.responseData.true);
+                            console.log(this.responseData);
                             localStorage.setItem('userData',JSON.stringify(this.responseData));//
                             //if all good go to the firstPage [TabsPage]
-                            this.navCtrl.push(TabsPage);
+
+
+                            //
+                            const alert =  this.popup.create({
+                              title: 'ההרשמה הצליחה',
+                              message: 'לקבלת התראות על מודעות חדשות צריך לכנס להגדרות ולהרשם',
+                              buttons: [
+                              /* {
+                                  text: 'להרשמה',
+                                  role: 'cancel',
+                                  handler: data => {
+                                    this.navCtrl.push(SettingsPage);
+                                  }
+                                },*/
+                                {
+                                  text: 'ok',
+                                  role: 'ok',
+                                  handler:data=>{
+                                    this.navCtrl.push(TabsPage);
+                                  }
+                                }
+                              ]
+                            });
+                            alert.present();
+                            //
+
 
                         }
                         else{

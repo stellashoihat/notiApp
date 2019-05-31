@@ -10,6 +10,7 @@ import 'rxjs/add/operator/map';
 */
 
 let apiUrl = 'http://127.0.0.1:8000/api/';
+let serverImagePath = "/images/thumbnail/";
 
 @Injectable()
 export class AuthServiceProvider {
@@ -29,10 +30,12 @@ export class AuthServiceProvider {
 
       headers.append('Access-Control-Allow-Origin' , '*');
      // headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
-     // headers.append('Accept','application/json');
-     // headers.append('content-type','application/json');
-       let options = new RequestOptions({ headers:headers,withCredentials: true});
-      // let options = new RequestOptions({ headers:headers});
+       //headers.append('Accept','application/json');
+       headers.append('content-type','application/json');
+       headers.append('fromApp','true');
+
+      // let options = new RequestOptions( { headers:headers,withCredentials: true});
+
 
       this.http.get(apiUrl + type, {headers: headers})
       .subscribe(res => {
@@ -40,7 +43,6 @@ export class AuthServiceProvider {
       }, (err) => {
         reject(err);
       });
-
 
       /*this.http.post(apiUrl + type, JSON.stringify(credentials), {headers: headers})
         .subscribe(res => {

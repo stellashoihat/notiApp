@@ -22,15 +22,18 @@
   </ion-grid>
 
   <ion-grid >
+    
+      <ion-row>
+          <ion-col center text-center>
+            <button ion-button full color="lightText" (click)="login()">כניסה</button>
+          </ion-col>
+        </ion-row>
+
     <ion-row>
       <ion-col center text-center>
-        <button ion-button full color="success" (click)="signup()">הרשמה למערכת</button>
+        <button ion-button full color="success" (click)="signup()">הרשמה</button>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col center text-center>
-        <button ion-button full color="lightText" (click)="login()">כניסה</button>
-      </ion-col>
-    </ion-row>
+
   </ion-grid>
 </ion-content>

@@ -45,7 +45,7 @@ export class LoginPage {
           this.navCtrl.push(TabsPage);
         }
         else{
-          this.presentToast("Please give valid username and password");
+          this.presentToast("שם משתמש וסיסמה לא נכונים");
         }
 
 
@@ -56,7 +56,7 @@ export class LoginPage {
      });
     }
     else{
-     this.presentToast("Give username and password");
+     this.presentToast("הכנס שם משתמש וסיסמה בבקשה");
     }
 
    }
@@ -70,4 +70,11 @@ export class LoginPage {
      toast.present();
    }
 
+
+
+   //reset_password
+
+   reset_password(){
+      console.log('reset_password');
+   }
 }

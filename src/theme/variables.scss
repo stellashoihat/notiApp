@@ -40,12 +40,14 @@ $colors: (
  // light:      #f4f4f4,
  // dark:       #222
 
- primary:           #2A2C43,
+ primary:           rgb(72, 81, 179),
  secondary:        #677077,
  lightprimary:    #B5B5B7,
  light:                 #f4f4f4,
  dark:                 #222,
- energy:             #f2b632
+ energy:             #f2b632,
+ background_color_app:             #fff,
+ search_color: #f2b632
 );
 $toolbar-background: color($colors, primary);
 
