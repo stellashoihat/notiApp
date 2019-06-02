@@ -1,3 +1,4 @@
+import { RequestPage } from './../request/request';
 import { AuthServiceProvider } from './../../providers/auth-service/auth-service';
 import { Component } from '@angular/core';
 import { NavController ,App, LoadingController, ToastController} from 'ionic-angular';
@@ -15,12 +16,14 @@ export class HomePage {
   user_full_name: any;
 
   userPostData = {"user_id":"","token":""};
-  constructor(public navCtrl: NavController , public app:App,  public authService:AuthServiceProvider,public loadingCtrl: LoadingController,private toastCtrl:ToastController) {
-
+  constructor(
+    public navCtrl: NavController ,
+    public app:App,
+    public authService:AuthServiceProvider,
+    public loadingCtrl: LoadingController,
+    private toastCtrl:ToastController) {
 
     const data = JSON.parse(localStorage.getItem('userData'));
-
-
     //this.userPostData.user_id = this.userDetails.user_id;
     //this.userPostData.token = this.userDetails.token;
     this.user_full_name = data.userData.name;
@@ -76,8 +79,11 @@ export class HomePage {
   toast.present();
 }
 newRequest(){
-  console.log("newRequest");
-
+  //console.log("newRequest");
+  this.navCtrl.push(RequestPage);
+}
+newSearch(){
+  console.log("newSearch");
 }
    /* logout(){
       // Remove API token

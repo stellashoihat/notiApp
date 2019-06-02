@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      הגשת בקשה
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list dir="rtl">
+    <ion-item>
+      <ion-label stacked>שם מלא</ion-label>
+      <ion-input type="text" [(ngModel)]="requestData.full_name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>תעודת זהות</ion-label>
+      <ion-input type="text" [(ngModel)]="requestData.personID"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>מספר חלקה</ion-label>
+      <ion-input type="text" [(ngModel)]="requestData.helka_num"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>גוש</ion-label>
+      <ion-input type="text" [(ngModel)]="requestData.gosh"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>מספר מטרים</ion-label>
+      <ion-input type="number" [(ngModel)]="requestData.meter_number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>טקסט הבקשה</ion-label>
+
+      <ion-textarea [(ngModel)]="requestData.request_text"> </ion-textarea>
+    </ion-item>
+
+    <button ion-button full color="success" (click)="send_request()">הרשמה</button>
+
+  </ion-list>
+</ion-content>

@@ -21,6 +21,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { HttpModule } from '@angular/http';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ItemImageComponent } from '../components/item-image/item-image';
+import { RequestPage } from '../pages/request/request';
 @NgModule({
   declarations: [
     MyApp,
@@ -29,6 +30,7 @@ import { ItemImageComponent } from '../components/item-image/item-image';
     HomePage,
     TabsPage,
     SignupPage,
+    RequestPage,
     LoginPage,
     WelcomePage,
     ItemDetailsPage,
@@ -49,6 +51,7 @@ import { ItemImageComponent } from '../components/item-image/item-image';
     HomePage,
     TabsPage,
     SignupPage,
+    RequestPage,
     LoginPage,
     WelcomePage,
     ItemDetailsPage,
