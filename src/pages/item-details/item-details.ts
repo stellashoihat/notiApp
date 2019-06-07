@@ -1,3 +1,5 @@
+import { ReportProblemPage } from './../report-problem/report-problem';
+import { ObjectionPage } from './../objection/objection';
 import { ItemImageComponent } from './../../components/item-image/item-image';
 import { AuthServiceProvider } from './../../providers/auth-service/auth-service';
 import { Component } from '@angular/core';
@@ -38,5 +40,16 @@ export class ItemDetailsPage {
       });
      profileModal.present();
      // console.log(img);
+  }
+
+
+  //
+  objection(dataReq){
+    console.log(dataReq.itemData);
+    this.navCtrl.push(ObjectionPage,dataReq.itemData);
+  }
+  takla(dataReq){
+    console.log(dataReq);
+    this.navCtrl.push(ReportProblemPage,dataReq.itemData);
   }
 }

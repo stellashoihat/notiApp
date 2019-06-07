@@ -22,6 +22,8 @@ import { HttpModule } from '@angular/http';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ItemImageComponent } from '../components/item-image/item-image';
 import { RequestPage } from '../pages/request/request';
+import { ObjectionPage } from '../pages/objection/objection';
+import { ReportProblemPage } from '../pages/report-problem/report-problem';
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +36,9 @@ import { RequestPage } from '../pages/request/request';
     LoginPage,
     WelcomePage,
     ItemDetailsPage,
-    ItemImageComponent
+    ItemImageComponent,
+    ObjectionPage,
+    ReportProblemPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,9 @@ import { RequestPage } from '../pages/request/request';
     LoginPage,
     WelcomePage,
     ItemDetailsPage,
-    ItemImageComponent
+    ItemImageComponent,
+    ObjectionPage,
+    ReportProblemPage
   ],
   providers: [
     StatusBar,

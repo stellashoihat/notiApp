@@ -64,9 +64,9 @@ postData(credentials, type) {
    // headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
    //headers.append('Accept','application/json');
    headers.append('content-type','application/json');
-     let options = new RequestOptions({ headers:headers,withCredentials: true});
+    // let options = new RequestOptions({ headers:headers,withCredentials: true});
     // let options = new RequestOptions({ headers:headers});
-  //  console.log(JSON.stringify(credentials));
+    //console.log(JSON.stringify(credentials));
     this.http.post(apiUrl + type, credentials, {headers: headers})//JSON.stringify(credentials)
       .subscribe(res => {
         //console.log(res);
