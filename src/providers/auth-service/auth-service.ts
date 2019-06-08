@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
   and Angular DI.
 */
 
-let apiUrl = 'http://127.0.0.1:8000/api/';
+let apiUrl = 'http://pandbnotices.com/api/';
 let serverImagePath = "/images/thumbnail/";
 
 @Injectable()

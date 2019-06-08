@@ -23,7 +23,7 @@ export class ItemImageComponent {
   }
 
   dismiss() {
-    let data = { 'foo': 'bar' };
+    let data = { 'ok': true };
     this.viewCtrl.dismiss(data);
   }
 }

@@ -17,7 +17,7 @@ import { IonicPage, NavController, NavParams,ModalController, ViewController } f
   templateUrl: 'item-details.html',
 })
 export class ItemDetailsPage {
-  serverImagePath = "http://127.0.0.1:8000/images/thumbnail/";
+  serverImagePath = "http://pandbnotices.com/images/thumbnail/";
   itemData : any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController) {
 
@@ -34,7 +34,7 @@ export class ItemDetailsPage {
     console.log(this.navParams.data);
   }
   toFullScreen(img){
-     let profileModal = this.modalCtrl.create(ItemImageComponent, { link: "http://127.0.0.1:8000/images/"+img });
+     let profileModal = this.modalCtrl.create(ItemImageComponent, { link: "http://pandbnotices.com/images/"+img });
       profileModal.onDidDismiss(data => {
         console.log(data);
       });
