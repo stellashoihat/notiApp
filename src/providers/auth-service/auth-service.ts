@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
   and Angular DI.
 */
 
-let apiUrl = 'http://pandbnotices.com/api/';
+let apiUrl = 'http://127.0.0.1:8000/api/';
 let serverImagePath = "/images/thumbnail/";
 
 @Injectable()
@@ -66,7 +66,7 @@ postData(credentials, type) {
    headers.append('content-type','application/json');
     // let options = new RequestOptions({ headers:headers,withCredentials: true});
     // let options = new RequestOptions({ headers:headers});
-    //console.log(JSON.stringify(credentials));
+    console.log(JSON.stringify(credentials));
     this.http.post(apiUrl + type, credentials, {headers: headers})//JSON.stringify(credentials)
       .subscribe(res => {
         //console.log(res);

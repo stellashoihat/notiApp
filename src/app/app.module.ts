@@ -24,6 +24,7 @@ import { ItemImageComponent } from '../components/item-image/item-image';
 import { RequestPage } from '../pages/request/request';
 import { ObjectionPage } from '../pages/objection/objection';
 import { ReportProblemPage } from '../pages/report-problem/report-problem';
+import { SearchPage } from '../pages/search/search';
 @NgModule({
   declarations: [
     MyApp,
@@ -38,7 +39,8 @@ import { ReportProblemPage } from '../pages/report-problem/report-problem';
     ItemDetailsPage,
     ItemImageComponent,
     ObjectionPage,
-    ReportProblemPage
+    ReportProblemPage,
+    SearchPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { ReportProblemPage } from '../pages/report-problem/report-problem';
     ItemDetailsPage,
     ItemImageComponent,
     ObjectionPage,
-    ReportProblemPage
+    ReportProblemPage,
+    SearchPage
   ],
   providers: [
     StatusBar,
