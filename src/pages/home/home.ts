@@ -85,11 +85,5 @@ newRequest(){
 newSearch(){
   console.log("newSearch");
 }
-   /* logout(){
-      // Remove API token
-      const root = this.app.getRootNav();
-      root.popToRoot();
-  }
-  */
-
+  
 }

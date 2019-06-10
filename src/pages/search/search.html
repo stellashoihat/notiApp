@@ -6,10 +6,65 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>search</ion-title>
+    <ion-title>חיפוש מודעה</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content dir="rtl">
+
+    <ion-item-group>
+        <!-- <ion-item-divider color="light">חיפוש על פי תאריך</ion-item-divider>
+
+        <ion-item>
+            <ion-label>תאריך התחלה</ion-label>
+            <ion-datetime display-format="D ,MM, YYYY" [(ngModel)]="searchData.startDate"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label>תאריך התחלה</ion-label>
+            <ion-datetime display-format="D ,M, YYYY" [(ngModel)]="searchData.endDate"></ion-datetime>
+          </ion-item> -->
+
+
+
+
+
+          <ion-item-divider color="light">חיפוש כללי</ion-item-divider>
+
+            <!-- <ion-item>
+              <ion-label>תאריך התחלה</ion-label>
+              <ion-datetime display-format="D ,MM, YYYY" [(ngModel)]="searchData.startDate"></ion-datetime>
+            </ion-item>
+            <ion-item>
+              <ion-label>תאריך התחלה</ion-label>
+              <ion-datetime display-format="D ,M, YYYY" [(ngModel)]="searchData.endDate"></ion-datetime>
+            </ion-item> -->
+            <ion-item>
+                <ion-label>מספר גוש</ion-label>
+                <ion-input type="text" [(ngModel)]="searchData.Gosh"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>מספר חלקה</ion-label>
+                <ion-input type="text" [(ngModel)]="searchData.helka"></ion-input>
+            </ion-item>
+            <!-- <ion-item>
+                <ion-label>איזור</ion-label>
+                <ion-input type="text" [(ngModel)]="searchData.area"></ion-input>
+            </ion-item> -->
+            <ion-item>
+                <ion-label>עיר</ion-label>
+                <ion-input type="text" [(ngModel)]="searchData.city"></ion-input>
+            </ion-item>
+            <!-- <ion-item>
+                <ion-label>מחוז</ion-label>
+                <ion-input type="text" [(ngModel)]="searchData.mahoz"></ion-input>
+            </ion-item> -->
+            <ion-item>
+                <button ion-button full color="success" (click)="do_search()">חפש</button>
+            </ion-item>
+
+      </ion-item-group>
+
+
+
 
 </ion-content>
