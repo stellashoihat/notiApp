@@ -12,10 +12,10 @@ import { SearchPage } from '../search/search';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = SettingsPage;
-  tab4Root = RequestPage;
-  tab5Root = SearchPage;
+  tab2Root = SearchPage;
+  tab3Root = RequestPage ;
+  tab4Root =AboutPage ;
+  tab5Root = SettingsPage;
 
   constructor() {
 
